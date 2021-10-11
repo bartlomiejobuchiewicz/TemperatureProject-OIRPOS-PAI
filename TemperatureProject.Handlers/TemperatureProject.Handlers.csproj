@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TemperatureProject.Domain\TemperatureProject.Domain.csproj" />
+    <ProjectReference Include="..\TemperatureProject.Infrastructure\TemperatureProject.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
