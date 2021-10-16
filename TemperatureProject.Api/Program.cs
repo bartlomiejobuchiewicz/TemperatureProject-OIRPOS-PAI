@@ -22,5 +22,6 @@ namespace TemperatureProject
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
     }
 }

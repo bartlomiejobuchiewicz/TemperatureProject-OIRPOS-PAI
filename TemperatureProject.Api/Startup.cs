@@ -4,10 +4,12 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System;
+using System.Reflection;
+using System.IO;
 
 namespace TemperatureProject
 {
@@ -24,6 +26,11 @@ namespace TemperatureProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen();
+            services.AddControllers();
+            services.AddOptions();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +50,15 @@ namespace TemperatureProject
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.)
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1");
+                c.RoutePrefix = string.Empty;
+            });
             app.UseRouting();
 
             app.UseAuthorization();
@@ -50,6 +66,11 @@ namespace TemperatureProject
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+            });
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
             });
         }
     }
