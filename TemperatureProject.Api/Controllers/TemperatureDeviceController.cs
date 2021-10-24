@@ -1,21 +1,44 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using TemperatureProject.Contract.Query;
+using TemperatureProject.Core.Exceptions;
+using TemperatureProject.Core.ExtendedRequests;
+using TemperatureProject.Core.ValueObjects;
+using TemperatureProject.Core.ValueObjects.Enums;
 
 namespace TemperatureProject.Api.Controllers
 {
-    [Route("api/v1/[controller]")]
+    [Route("/api/v1/device")]
     [ApiController]
-
-    public class TemperatureDeviceController: ControllerBase
+    public class TemperatureDeviceController : AutomateControllerBase
     {
-       [HttpGet]
-       [Route("phpmyadmin/all")]
-       public async Task<ActionResult<dynamic>> GetDataFromPHPMyAdmin()
+        public TemperatureDeviceController(IMediator commandBus) : base(commandBus)
         {
-            throw new NotImplementedException();
+
         }
+        /// <summary>
+        /// Test description
+        /// </summary>
+        /// <remarks>
+        ///     <b> Question: </b>
+        ///     <br>Answer: </br>
+        ///     Sample Request:
+        ///     {
+        ///         Example
+        ///     }
+        /// </remarks>
+        /// <returns></returns>
+        /// 
+        [HttpGet]
+        [Route("GetDataFromPHPMyAdmin/all")]
+        public async Task<IActionResult> GetDataFromPHPMyAdmin()
+        {
+            return await ExecuteRequestAsync(new GetDataFromPHPMyAdminQuery());
+        }
+
     }
 }

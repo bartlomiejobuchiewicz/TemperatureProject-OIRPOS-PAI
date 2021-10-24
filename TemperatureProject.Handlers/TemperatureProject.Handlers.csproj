@@ -5,8 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TemperatureProject.Contract\TemperatureProject.Contract.csproj" />
+    <ProjectReference Include="..\TemperatureProject.Core\TemperatureProject.Core.csproj" />
     <ProjectReference Include="..\TemperatureProject.Domain\TemperatureProject.Domain.csproj" />
     <ProjectReference Include="..\TemperatureProject.Infrastructure\TemperatureProject.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Mappers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
   </ItemGroup>
 
 </Project>
