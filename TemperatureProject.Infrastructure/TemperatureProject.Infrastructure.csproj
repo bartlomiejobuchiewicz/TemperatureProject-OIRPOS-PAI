@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TemperatureProject.Core\TemperatureProject.Core.csproj" />
+    <ProjectReference Include="..\TemperatureProject.Domain\TemperatureProject.Domain.csproj" />
   </ItemGroup>
 
 </Project>

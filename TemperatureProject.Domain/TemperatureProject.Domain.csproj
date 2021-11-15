@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TemperatureProject.Core\TemperatureProject.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Factories\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>

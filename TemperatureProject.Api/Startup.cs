@@ -14,6 +14,11 @@ using TemperatureProject.Infrastructure;
 using Autofac;
 using MediatR;
 using TemperatureProject.Contract.Query;
+using TemperatureProject.Domain.Interfaces;
+using TemperatureProject.Infrastructure.Repositories;
+using TemperatureProject.Core.Clients;
+using TemperatureProject.Core.Clients.Interfaces;
+using TemperatureProject.Core.Configuration;
 
 namespace TemperatureProject
 {
@@ -42,11 +47,22 @@ namespace TemperatureProject
 
             // Register the Swagger generator, defining 1 or more Swagger documents
 
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(options => 
+            {
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                options.IncludeXmlComments(xmlPath);
+            });
             services.AddControllers();
             services.AddOptions();
             var assembly = AppDomain.CurrentDomain.Load("TemperatureProject.Handlers");
             services.AddMediatR(assembly);
+
+            services.AddTransient<ITemperatureDeviceRepository, TemperatureDeviceRepository>();
+
+            services.AddTransient<IDeviceClient, DeviceClient>();
+
+            services.AddSingleton(Configuration.GetSection("TemperatureDeviceConfiguration").Get<DeviceSettings>());
             //           var containerBuilder = new ContainerBuilder();
             //           ConfigureContainer(containerBuilder);
         }
@@ -82,6 +98,7 @@ namespace TemperatureProject
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
                 c.RoutePrefix = String.Empty;
             });
+
             app.UseRouting();
 
             app.UseAuthorization();
