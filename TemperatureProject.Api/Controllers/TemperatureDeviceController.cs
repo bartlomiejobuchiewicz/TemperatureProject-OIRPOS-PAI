@@ -29,19 +29,20 @@ namespace TemperatureProject.Api.Controllers
         ///     <br> Reponse example:
         ///     <br>[</br>
         /// <br></br>{
-        ///   "id": "3",
-        ///   "datetime": "16.10.2021 11:24:32",
-        ///   "highSensor": "20.69",
-        ///   "outsideSensor": "21.44",
-        ///   "lowSensor": "20.75"
-        ///  },
-        /// {
-        ///   "id": "4",
-        ///    "datetime": "16.10.2021 11:25:33",
-        ///    "highSensor": "20.81",
-        ///   "outsideSensor": "21.50",
-        ///  "lowSensor": "20.81"
+        /// <br>"id": "3",</br>
+        /// <br>"datetime": "16.10.2021 11:24:32",</br>  
+        /// <br>"highSensor": "20.69",</br>  
+        /// <br>"outsideSensor": "21.44",</br>  
+        /// <br>"lowSensor": "20.75"</br>  
+        /// <br>},</br> 
+        /// <br>{</br>{
+        /// <br>"id": "4",</br>
+        /// <br>"datetime": "16.10.2021 11:25:33",</br>
+        /// <br>"highSensor": "20.81",</br>
+        /// <br>"outsideSensor": "21.50",</br>  
+        /// <br>"lowSensor": "20.81"</br> 
         /// } </br>
+        /// <br>] </br>
         /// </remarks>
         /// <returns></returns>
         /// 
