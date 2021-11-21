@@ -16,8 +16,6 @@ using MediatR;
 using TemperatureProject.Contract.Query;
 using TemperatureProject.Domain.Interfaces;
 using TemperatureProject.Infrastructure.Repositories;
-using TemperatureProject.Core.Clients;
-using TemperatureProject.Core.Clients.Interfaces;
 using TemperatureProject.Core.Configuration;
 using TemperatureProject.Database;
 using Microsoft.EntityFrameworkCore;
@@ -60,12 +58,9 @@ namespace TemperatureProject
             var assembly = AppDomain.CurrentDomain.Load("TemperatureProject.Handlers");
             services.AddMediatR(assembly);
 
-            services.AddTransient<ITemperatureDeviceRepository, TemperatureDeviceRepository>();
             services.AddTransient<ITemperatureDatabaseRepository, TemperatureDatabaseRepository>();
 
-            services.AddTransient<IDeviceClient, DeviceClient>();
 
-            services.AddSingleton(Configuration.GetSection("TemperatureDeviceConfiguration").Get<DeviceSettings>());
             services.AddSingleton(Configuration.GetSection("LocalDatabaseConfiguration").Get<LocalSettings>());
 
             var connectionString = Configuration["LocalDatabaseConfiguration:MyConnection"];

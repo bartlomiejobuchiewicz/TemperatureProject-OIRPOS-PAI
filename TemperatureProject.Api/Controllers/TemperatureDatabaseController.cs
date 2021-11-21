@@ -34,48 +34,11 @@ namespace TemperatureProject.Api.Controllers
         /// 
         [HttpGet]
         [Route("originData/all")]
-        public async Task<IActionResult> GetOriginData()
+        public async Task<IActionResult> GetAll()
         {
             return await ExecuteRequestAsync(new GetOriginDataQuery());
         }
-        /// <summary>
-        /// This endpoint returns all measurements, according to provided filters from local database.
-        /// </summary>
-        /// <remarks>
-        ///     <b> Question: How to run this endpoint?</b>
-        ///     <br>Answer: </br>
-        ///     <b> Question:</b>
-        ///     <br>Answer: </br>
-        ///     <br> Reponse example:</br>
-        /// </remarks>
-        /// <returns></returns>
-        /// 
-        [HttpGet]
-        [Route("measurements")]
-        public async Task<IActionResult> GetMeasurements()
-        {
-            throw new NotImplementedException();
-        }
-        /// <summary>
-        /// This endpoint returns all filters of measurements to GET from local database.
-        /// </summary>
-        /// <remarks>
-        ///     <b> Question: How to run this endpoint?</b>
-        ///     <br>Answer: </br>
-        ///     <b> Question:</b>
-        ///     <br>Answer: </br>
-        ///     <br> Reponse example:</br>
-        /// </remarks>
-        /// <returns></returns>
-        /// 
-
-        [HttpGet]
-        [Route("measurements/filters")]
-        public async Task<IActionResult> GetMeasurementsFilters()
-        {
-            throw new NotImplementedException();
-        }
-
+      
         /// <summary>
         /// This endpoint returns single measurement by id from local database.
         /// </summary>
@@ -90,8 +53,8 @@ namespace TemperatureProject.Api.Controllers
         /// 
 
         [HttpGet]
-        [Route("measurements/{id}")]
-        public async Task<IActionResult> GetMeasurementById()
+        [Route("originData/{id}")]
+        public async Task<IActionResult> GetById()
         {
             throw new NotImplementedException();
         }
@@ -110,8 +73,8 @@ namespace TemperatureProject.Api.Controllers
         /// 
 
         [HttpDelete]
-        [Route("measurements/{id}")]
-        public async Task<IActionResult> DeleteMeasurement()
+        [Route("originData/{id}")]
+        public async Task<IActionResult> DeleteById()
         {
             throw new NotImplementedException();
         }
@@ -130,8 +93,8 @@ namespace TemperatureProject.Api.Controllers
         /// 
 
         [HttpPatch]
-        [Route("measurements/{id}")]
-        public async Task<IActionResult> EditMeasurement()
+        [Route("originData/{id}")]
+        public async Task<IActionResult> EditById()
         {
             throw new NotImplementedException();
         }
@@ -150,8 +113,8 @@ namespace TemperatureProject.Api.Controllers
         /// 
 
         [HttpPost]
-        [Route("measurements/{id}")]
-        public async Task<IActionResult> AddMeasurement()
+        [Route("originData/{id}")]
+        public async Task<IActionResult> AddNew()
         {
             throw new NotImplementedException();
         }

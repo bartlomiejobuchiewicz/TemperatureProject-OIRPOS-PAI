@@ -7,7 +7,6 @@ namespace TemperatureProject.Infrastructure
 {
     public class TemperatureProjectSettings
     {
-        public DeviceSettings DeviceSettings { get; set; }
         public LocalSettings LocalSettings { get; set; }
     }
 }
