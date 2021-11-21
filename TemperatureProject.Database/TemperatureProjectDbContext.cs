@@ -19,7 +19,7 @@ namespace TemperatureProject.Database
             _localSettings = localSettings;
         }
 
-        public async Task<IEnumerable<OriginDataModel>> GetOriginData()
+        public async Task<IEnumerable<OriginDataModel>> GetAllOriginData()
         {
            var query = from row in TemperatureOriginData select row;
            return query;

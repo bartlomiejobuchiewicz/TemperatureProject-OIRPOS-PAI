@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TemperatureProject.Core.Dto;
 using TemperatureProject.Core.ValueObjects;
 using TemperatureProject.Database.Model;
 using TemperatureProject.Domain.Interfaces;
@@ -18,9 +19,20 @@ namespace TemperatureProject.Domain.Services
             _temperatureDatabaseRepository = temperatureDatabaseRepository;
         }
 
-        public async Task<ExecutionResult<string>> SynchronizePHPDataWithOriginTable()
+        public async Task<IEnumerable<OriginDataDto>> GetAllDataAsync()
         {
-            throw new NotImplementedException();
+            var result = await _temperatureDatabaseRepository.GetAllDataFromOriginDataAsync();
+
+            var convertedData = result.Select(row => new OriginDataDto
+            {
+                Czujnik1 = row.Czujnik1,
+                Czujnik2 = row.Czujnik2,
+                Czujnik3 = row.Czujnik3,
+                Data = row.Data,
+                ID = row.ID.ToString()
+            });
+
+            return convertedData;
         }
     }
 }

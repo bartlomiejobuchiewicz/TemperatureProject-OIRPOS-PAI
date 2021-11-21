@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TemperatureProject.Core.Dto;
 using TemperatureProject.Core.ValueObjects;
 using TemperatureProject.Database;
 using TemperatureProject.Database.Model;
@@ -18,17 +20,12 @@ namespace TemperatureProject.Infrastructure.Repositories
             _dbcontext = dbContext;
         }
 
-        public async Task<ExecutionResult<string>> AddDataFromPHPToOriginData(IEnumerable<DeviceContract> deviceData)
+        public async Task<IEnumerable<OriginDataModel>> GetAllDataFromOriginDataAsync()
         {
-            //_dbcontext.Add(deviceData);
-            throw new NotImplementedException();
-        }
+            var result = await _dbcontext.GetAllOriginData();
 
-        public async Task<ExecutionResult<IEnumerable<OriginDataModel>>> GetDataFromOriginDataAsync()
-        {
-            var result = await _dbcontext.GetOriginData();
 
-            throw new NotImplementedException();
+            return result;
         }
     }
 }
