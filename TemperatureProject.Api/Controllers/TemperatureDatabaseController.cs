@@ -36,7 +36,7 @@ namespace TemperatureProject.Api.Controllers
         [Route("originData/all")]
         public async Task<IActionResult> GetAll()
         {
-            return await ExecuteRequestAsync(new GetOriginDataQuery());
+            return await ExecuteRequestAsync(new GetAllOriginDataQuery());
         }
       
         /// <summary>

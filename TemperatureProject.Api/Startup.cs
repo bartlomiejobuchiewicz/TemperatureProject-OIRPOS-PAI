@@ -19,6 +19,8 @@ using TemperatureProject.Infrastructure.Repositories;
 using TemperatureProject.Core.Configuration;
 using TemperatureProject.Database;
 using Microsoft.EntityFrameworkCore;
+using TemperatureProject.Domain.Services.Interfaces;
+using TemperatureProject.Domain.Services;
 
 namespace TemperatureProject
 {
@@ -59,7 +61,7 @@ namespace TemperatureProject
             services.AddMediatR(assembly);
 
             services.AddTransient<ITemperatureDatabaseRepository, TemperatureDatabaseRepository>();
-
+            services.AddTransient<ITemperatureProjectService, TemperatureProjectService>();
 
             services.AddSingleton(Configuration.GetSection("LocalDatabaseConfiguration").Get<LocalSettings>());
 

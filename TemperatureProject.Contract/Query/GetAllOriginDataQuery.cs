@@ -7,7 +7,7 @@ using TemperatureProject.Core.ValueObjects;
 
 namespace TemperatureProject.Contract.Query
 {
-    public class GetOriginDataQuery: IRequest<ExecutionResult<IEnumerable<OriginDataDto>>>
+    public class GetAllOriginDataQuery: IRequest<ExecutionResult<IEnumerable<OriginDataDto>>>
     {
     }
 }
