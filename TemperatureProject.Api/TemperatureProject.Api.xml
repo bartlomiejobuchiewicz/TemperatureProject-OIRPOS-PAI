@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TemperatureProject.Api</name>
+    </assembly>
+    <members>
+        <member name="M:TemperatureProject.Api.Controllers.AdminController.SynchronizePHPDataWithLocalDatabase">
+            <summary>
+            This endpoint synchronizes data from PHPMyAdmin database with local database - it POSTS lacking measurements.
+            </summary>
+            <remarks>
+                <b> Question: How to run this endpoint?</b>
+                <br>Answer: You have to run PHPMyAdmin with SQL to make this endpoint work.</br>
+            </remarks>
+            <returns></returns>
+            
+        </member>
+        <member name="M:TemperatureProject.Api.Controllers.TemperatureDatabaseController.GetOriginData">
+            <summary>
+            This endpoint returns all measurements, according to provided filters from local database.
+            </summary>
+            <remarks>
+                <b> Question: How to run this endpoint?</b>
+                <br>Answer: </br>
+                <b> Question:</b>
+                <br>Answer: </br>
+                <br> Reponse example:</br>
+            </remarks>
+            <returns></returns>
+            
+        </member>
+        <member name="M:TemperatureProject.Api.Controllers.TemperatureDatabaseController.GetMeasurements">
+            <summary>
+            This endpoint returns all measurements, according to provided filters from local database.
+            </summary>
+            <remarks>
+                <b> Question: How to run this endpoint?</b>
+                <br>Answer: </br>
+                <b> Question:</b>
+                <br>Answer: </br>
+                <br> Reponse example:</br>
+            </remarks>
+            <returns></returns>
+            
+        </member>
+        <member name="M:TemperatureProject.Api.Controllers.TemperatureDatabaseController.GetMeasurementsFilters">
+            <summary>
+            This endpoint returns all filters of measurements to GET from local database.
+            </summary>
+            <remarks>
+                <b> Question: How to run this endpoint?</b>
+                <br>Answer: </br>
+                <b> Question:</b>
+                <br>Answer: </br>
+                <br> Reponse example:</br>
+            </remarks>
+            <returns></returns>
+            
+        </member>
+        <member name="M:TemperatureProject.Api.Controllers.TemperatureDatabaseController.GetMeasurementById">
+            <summary>
+            This endpoint returns single measurement by id from local database.
+            </summary>
+            <remarks>
+                <b> Question: How to run this endpoint?</b>
+                <br>Answer: </br>
+                <b> Question:</b>
+                <br>Answer: </br>
+                <br> Reponse example:</br>
+            </remarks>
+            <returns></returns>
+            
+        </member>
+        <member name="M:TemperatureProject.Api.Controllers.TemperatureDatabaseController.DeleteMeasurement">
+            <summary>
+            This endpoint deletes single measurement with provided id from local database.
+            </summary>
+            <remarks>
+                <b> Question: How to run this endpoint?</b>
+                <br>Answer: </br>
+                <b> Question:</b>
+                <br>Answer: </br>
+                <br> Reponse example:</br>
+            </remarks>
+            <returns></returns>
+            
+        </member>
+        <member name="M:TemperatureProject.Api.Controllers.TemperatureDatabaseController.EditMeasurement">
+            <summary>
+            This endpoint edits single measurement value with provided body.
+            </summary>
+            <remarks>
+                <b> Question: How to run this endpoint?</b>
+                <br>Answer: </br>
+                <b> Question:</b>
+                <br>Answer: </br>
+                <br> Reponse example:</br>
+            </remarks>
+            <returns></returns>
+            
+        </member>
+        <member name="M:TemperatureProject.Api.Controllers.TemperatureDatabaseController.AddMeasurement">
+            <summary>
+            This endpoint adds to database single measurement with provided body.
+            </summary>
+            <remarks>
+                <b> Question: How to run this endpoint?</b>
+                <br>Answer: </br>
+                <b> Question:</b>
+                <br>Answer: </br>
+                <br> Reponse example:</br>
+            </remarks>
+            <returns></returns>
+            
+        </member>
+        <member name="M:TemperatureProject.Api.Controllers.TemperatureDeviceController.GetDataFromPHPMyAdmin">
+            <summary>
+            This endpoint returns all data from PHP MyAdmin database(from Device), mapped on DTO. 
+            </summary>
+            <remarks>
+                <b> Question: How to run this endpoint?</b>
+                <br>Answer: You have to run PHPMyAdmin with SQL to make this endpoint work. </br>
+                <br> Reponse example:
+                <br>[</br>
+            <br></br>{
+            <br>"id": "3",</br>
+            <br>"datetime": "16.10.2021 11:24:32",</br>  
+            <br>"highSensor": "20.69",</br>  
+            <br>"outsideSensor": "21.44",</br>  
+            <br>"lowSensor": "20.75"</br>  
+            <br>},</br> 
+            <br>{</br>{
+            <br>"id": "4",</br>
+            <br>"datetime": "16.10.2021 11:25:33",</br>
+            <br>"highSensor": "20.81",</br>
+            <br>"outsideSensor": "21.50",</br>  
+            <br>"lowSensor": "20.81"</br> 
+            } </br>
+            <br>] </br>
+            </remarks>
+            <returns></returns>
+            
+        </member>
+    </members>
+</doc>
