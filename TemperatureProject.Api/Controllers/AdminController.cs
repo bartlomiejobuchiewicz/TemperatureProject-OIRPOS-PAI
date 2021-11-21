@@ -25,7 +25,7 @@ namespace TemperatureProject.Api.Controllers
         /// This endpoint synchronizes data from PHPMyAdmin database with local database - it POSTS lacking measurements.
         /// </summary>
         /// <remarks>
-        ///     <b> Question: How to run this endpoint?</b>
+        ///     <b> Question: How to run this endpoint??</b>
         ///     <br>Answer: You have to run PHPMyAdmin with SQL to make this endpoint work.</br>
         /// </remarks>
         /// <returns></returns>
