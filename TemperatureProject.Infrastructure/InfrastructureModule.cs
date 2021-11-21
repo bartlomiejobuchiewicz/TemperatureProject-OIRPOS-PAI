@@ -22,8 +22,6 @@ namespace TemperatureProject.Infrastructure
 
         private void LoadConfigurations(ContainerBuilder builder)
         {
-            builder.Register(_ => _settings.DeviceSettings)
-                .InstancePerLifetimeScope();
         }
     }
 }

@@ -12,20 +12,14 @@ namespace TemperatureProject.Domain.Services
 {
     public class TemperatureProjectService: ITemperatureProjectService
     {
-        private readonly ITemperatureDeviceRepository _temperatureDeviceRepository;
         private readonly ITemperatureDatabaseRepository _temperatureDatabaseRepository;
-        public TemperatureProjectService(ITemperatureDeviceRepository temperatureDeviceRepository, ITemperatureDatabaseRepository temperatureDatabaseRepository)
+        public TemperatureProjectService(ITemperatureDatabaseRepository temperatureDatabaseRepository)
         {
-            _temperatureDeviceRepository = temperatureDeviceRepository;
             _temperatureDatabaseRepository = temperatureDatabaseRepository;
         }
 
         public async Task<ExecutionResult<string>> SynchronizePHPDataWithOriginTable()
         {
-            var deviceData = await _temperatureDeviceRepository.GetDataAsync();
-
-            var result = await _temperatureDatabaseRepository.AddDataFromPHPToOriginData(deviceData);
-
             throw new NotImplementedException();
         }
     }
