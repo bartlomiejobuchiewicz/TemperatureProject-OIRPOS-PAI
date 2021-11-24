@@ -10,5 +10,6 @@ namespace TemperatureProject.Domain.Services.Interfaces
     public interface ITemperatureProjectService
     {
         Task<IEnumerable<OriginDataDto>> GetAllDataAsync();
+        Task<OriginDataDto> GetDataByIdAsync(int id);
     }
 }

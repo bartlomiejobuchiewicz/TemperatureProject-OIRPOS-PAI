@@ -64,11 +64,10 @@ namespace TemperatureProject
             services.AddTransient<ITemperatureProjectService, TemperatureProjectService>();
 
             services.AddSingleton(Configuration.GetSection("LocalDatabaseConfiguration").Get<LocalSettings>());
-
             var connectionString = Configuration["LocalDatabaseConfiguration:MyConnection"];
             services.AddDbContext<TemperatureProjectDbContext>
                 (options => {
-                    options.UseSqlServer(connectionString);
+                    options.UseSqlServer(connectionString, optionsBuilder => optionsBuilder.MigrationsAssembly("TemperatureProject.Api"));
                 });
             //           var containerBuilder = new ContainerBuilder();
             //           ConfigureContainer(containerBuilder);
@@ -80,7 +79,7 @@ namespace TemperatureProject
  //       }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, TemperatureProjectDbContext db)
         {
             if (env.IsDevelopment())
             {
@@ -93,6 +92,7 @@ namespace TemperatureProject
                 app.UseHsts();
             }
 
+            db.Database.Migrate();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
