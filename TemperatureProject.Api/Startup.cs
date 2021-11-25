@@ -67,7 +67,7 @@ namespace TemperatureProject
             var connectionString = Configuration["LocalDatabaseConfiguration:MyConnection"];
             services.AddDbContext<TemperatureProjectDbContext>
                 (options => {
-                    options.UseSqlServer(connectionString, optionsBuilder => optionsBuilder.MigrationsAssembly("TemperatureProject.Api"));
+                    options.UseSqlServer(connectionString, optionsBuilder => optionsBuilder.MigrationsAssembly("TemperatureProject.Database"));
                 });
             //           var containerBuilder = new ContainerBuilder();
             //           ConfigureContainer(containerBuilder);

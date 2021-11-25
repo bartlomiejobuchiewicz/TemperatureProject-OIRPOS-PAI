@@ -39,7 +39,49 @@ namespace TemperatureProject.Database.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("TemperatureOriginData2");
+                    b.ToTable("TemperatureOriginData");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Czujnik1 = "20.69",
+                            Czujnik2 = "21.44",
+                            Czujnik3 = "20.75",
+                            Data = "16.10.2021 11:24:32"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Czujnik1 = "20.81",
+                            Czujnik2 = "21.50",
+                            Czujnik3 = "20.81",
+                            Data = "16.10.2021 11:25:33"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Czujnik1 = "20.75",
+                            Czujnik2 = "21.56",
+                            Czujnik3 = "20.81",
+                            Data = "16.10.2021 11:26:34"
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Czujnik1 = "20.81",
+                            Czujnik2 = "21.62",
+                            Czujnik3 = "20.81",
+                            Data = "16.10.2021 11:27:35"
+                        },
+                        new
+                        {
+                            ID = 5,
+                            Czujnik1 = "20.88",
+                            Czujnik2 = "21.62",
+                            Czujnik3 = "20.88",
+                            Data = "16.10.2021 11:28:36"
+                        });
                 });
 #pragma warning restore 612, 618
         }
