@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using TemperatureProject.Contract.Command;
 using TemperatureProject.Contract.Query;
 using TemperatureProject.Core.Exceptions;
 using TemperatureProject.Core.ExtendedRequests;
@@ -54,9 +55,9 @@ namespace TemperatureProject.Api.Controllers
 
         [HttpGet]
         [Route("originData/{id}")]
-        public async Task<IActionResult> GetById()
+        public async Task<IActionResult> GetById(int id)
         {
-            throw new NotImplementedException();
+            return await ExecuteRequestAsync(new GetOriginDataByIdQuery { Id = id});
         }
 
         /// <summary>
@@ -74,9 +75,9 @@ namespace TemperatureProject.Api.Controllers
 
         [HttpDelete]
         [Route("originData/{id}")]
-        public async Task<IActionResult> DeleteById()
+        public async Task<IActionResult> DeleteById(int id)
         {
-            throw new NotImplementedException();
+            return await ExecuteRequestAsync(new DeleteOriginDataByIdCommand { Id = id });
         }
 
         /// <summary>

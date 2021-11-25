@@ -12,5 +12,6 @@ namespace TemperatureProject.Domain.Interfaces
     public interface ITemperatureDatabaseRepository
     {
         Task<IEnumerable<OriginDataModel>> GetAllDataFromOriginDataAsync();
+        Task<OriginDataModel> GetDataFromOriginDataByIdAsync(int id);
     }
 }

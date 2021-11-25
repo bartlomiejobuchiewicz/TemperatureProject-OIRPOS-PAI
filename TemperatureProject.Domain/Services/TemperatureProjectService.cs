@@ -25,14 +25,28 @@ namespace TemperatureProject.Domain.Services
 
             var convertedData = result.Select(row => new OriginDataDto
             {
+                ID = row.ID.ToString(),
+                Data = row.Data,
                 Czujnik1 = row.Czujnik1,
                 Czujnik2 = row.Czujnik2,
                 Czujnik3 = row.Czujnik3,
-                Data = row.Data,
-                ID = row.ID.ToString()
             });
 
             return convertedData;
+        }
+
+        public async Task<OriginDataDto> GetDataByIdAsync(int id)
+        {
+            var result = await _temperatureDatabaseRepository.GetDataFromOriginDataByIdAsync(id);
+
+            return new OriginDataDto 
+            {
+                ID = result.ID.ToString(),
+                Data = result.Data,
+                Czujnik1 = result.Czujnik1,
+                Czujnik2 = result.Czujnik2,
+                Czujnik3 = result.Czujnik3
+            };
         }
     }
 }

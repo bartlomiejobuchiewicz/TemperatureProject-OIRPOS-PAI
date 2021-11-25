@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TemperatureProject.Core.Dto;
+using TemperatureProject.Core.Exceptions;
 using TemperatureProject.Core.ValueObjects;
 using TemperatureProject.Database;
 using TemperatureProject.Database.Model;
@@ -22,8 +23,19 @@ namespace TemperatureProject.Infrastructure.Repositories
 
         public async Task<IEnumerable<OriginDataModel>> GetAllDataFromOriginDataAsync()
         {
-            var result = await _dbcontext.GetAllOriginData();
+            var result = await _dbcontext.GetAllData();
 
+            return result;
+        }
+
+        public async Task<OriginDataModel> GetDataFromOriginDataByIdAsync(int id)
+        {
+            var result = await _dbcontext.GetDataById(id);
+
+            if (result == null)
+            {
+                throw new EntityNotFoundException($"Data with ID {id} was not found in database.");
+            }
 
             return result;
         }
