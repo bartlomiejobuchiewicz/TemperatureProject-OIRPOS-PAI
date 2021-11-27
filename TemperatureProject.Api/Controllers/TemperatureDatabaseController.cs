@@ -94,10 +94,17 @@ namespace TemperatureProject.Api.Controllers
         /// 
 
         [HttpPatch]
-        [Route("originData/{id}")]
-        public async Task<IActionResult> EditById()
+        [Route("originData")]
+        public async Task<IActionResult> EditById([FromBody] EditOriginDataByIdCommand command)
         {
-            throw new NotImplementedException();
+            return await ExecuteRequestAsync(new EditOriginDataByIdCommand 
+            { 
+                Id = command.Id,
+                Data = command.Data,
+                Czujnik1 = command.Czujnik1,
+                Czujnik2 = command.Czujnik2,
+                Czujnik3 = command.Czujnik3
+            });
         }
 
         /// <summary>
@@ -114,10 +121,16 @@ namespace TemperatureProject.Api.Controllers
         /// 
 
         [HttpPost]
-        [Route("originData/{id}")]
-        public async Task<IActionResult> AddNew()
+        [Route("originData")]
+        public async Task<IActionResult> AddNewData([FromBody] AddOriginDataCommand command)
         {
-            throw new NotImplementedException();
+            return await ExecuteRequestAsync(new AddOriginDataCommand
+            {
+                Data = command.Data,
+                Czujnik1 = command.Czujnik1,
+                Czujnik2 = command.Czujnik2,
+                Czujnik3 = command.Czujnik3
+            });
         }
     }
 }
