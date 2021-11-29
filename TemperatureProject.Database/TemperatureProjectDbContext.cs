@@ -19,21 +19,48 @@ namespace TemperatureProject.Database
             _localSettings = localSettings;
         }
 
-        public async Task<IEnumerable<OriginDataModel>> GetAllData()
+        public Task<List<OriginDataModel>> GetAllData()
         {
-           var query = await (from row in TemperatureOriginData select row).ToListAsync();
+           var query = (from row in TemperatureOriginData select row).ToListAsync();
 
            return query;
         }
 
-        public async Task<OriginDataModel> GetDataById(int id)
+        public Task<OriginDataModel> GetDataById(int id)
         {
-            var query = TemperatureOriginData.FirstOrDefaultAsync(row => row.ID == id);
+            var query = TemperatureOriginData.AsNoTracking().FirstOrDefaultAsync(row => row.ID == id);
 
-            await Task.WhenAll(query);
-
-            return query.Result;
+            return query;
         }
+
+        public async Task DeleteDataById(int id)
+        {
+            var getData = await GetDataById(id);
+
+            var deleteResult = TemperatureOriginData.Remove(getData);
+        }
+
+        public async Task EditDataById(OriginDataModel model)
+        {
+            var result = TemperatureOriginData.SingleOrDefault(b => b.ID == model.ID);
+            if (result != null)
+            {
+                result.Czujnik1 = model.Czujnik1;
+                result.Czujnik2 = model.Czujnik2;
+                result.Czujnik3 = model.Czujnik3;
+                result.Data = model.Data;
+            }
+            else
+            {
+                throw new NotImplementedException($"Update in database has been failed");
+            }
+        }
+
+        public async Task AddDataToOriginData(OriginDataModel model)
+        {
+            await this.AddAsync(model);
+        }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -90,5 +117,7 @@ namespace TemperatureProject.Database
 
             base.OnModelCreating(modelBuilder);
         }
+
+       
     }
 }
