@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\I\PRACA MAGISTERSKA\MAGISTERKA\Backend\TemperatureProject\TemperatureProject.Api\TemperatureProject.Api.xml</DocumentationFile>
+    <DocumentationFile>$(ProjectDir)\TemperatureProject.Api\TemperatureProject.Api.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

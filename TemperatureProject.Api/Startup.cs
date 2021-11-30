@@ -92,7 +92,9 @@ namespace TemperatureProject
                 app.UseHsts();
             }
 
-            db.Database.Migrate();
+            db.Database.EnsureCreated();
+
+            // db.Database.Migrate();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
