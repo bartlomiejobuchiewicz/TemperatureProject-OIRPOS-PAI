@@ -25,11 +25,12 @@ namespace TemperatureProject.Api.Controllers
         /// This endpoint returns all measurements, according to provided filters from local database.
         /// </summary>
         /// <remarks>
-        ///     <b> Question: How to run this endpoint?</b>
-        ///     <br>Answer: </br>
-        ///     <b> Question:</b>
-        ///     <br>Answer: </br>
-        ///     <br> Reponse example:</br>
+        ///     <h3>How to run this endpoint?</h3>
+        ///     <p>To run this endpoint you have to send a GET request to the server: <i>https://<b>server_url</b>/api/v1/originData/all</i></p>
+        ///     <h3>What response is get?</h3>
+        ///     <p>The server returns all records from the Database, in the JSON format.</p>
+        ///     <h3>Reponse example</h3>
+        ///     <p>To see response example click "Try it out" and then "Execute".</p>
         /// </remarks>
         /// <returns></returns>
         /// 
@@ -39,19 +40,20 @@ namespace TemperatureProject.Api.Controllers
         {
             return await ExecuteRequestAsync(new GetAllOriginDataQuery());
         }
-      
+
         /// <summary>
         /// This endpoint returns single measurement by id from local database.
         /// </summary>
         /// <remarks>
-        ///     <b> Question: How to run this endpoint?</b>
-        ///     <br>Answer: </br>
-        ///     <b> Question:</b>
-        ///     <br>Answer: </br>
-        ///     <br> Reponse example:</br>
+        ///     <h3>How to run this endpoint?</h3>
+        ///     <p>To run this endpoint you have to send a GET request to the server: <i>https://<b>server_url</b>/api/v1/originData/{id}</i>. Where the <i>id</i> is obligatory request parameter and specifes identification number of desired record.</p>
+        ///     <h3>What response is get?</h3>
+        ///     <p>The server returns the record from the Database. The record which was specifed by the <i>id</i>. Data is delivered in the JSON format.</p>
+        ///     <h3>Reponse example</h3>
+        ///     <p>To see response example click "Try it out", enter record id and then click "Execute".</p>
         /// </remarks>
         /// <returns></returns>
-        /// 
+        ///
 
         [HttpGet]
         [Route("originData/{id}")]
@@ -64,11 +66,12 @@ namespace TemperatureProject.Api.Controllers
         /// This endpoint deletes single measurement with provided id from local database.
         /// </summary>
         /// <remarks>
-        ///     <b> Question: How to run this endpoint?</b>
-        ///     <br>Answer: </br>
-        ///     <b> Question:</b>
-        ///     <br>Answer: </br>
-        ///     <br> Reponse example:</br>
+        ///     <h3>How to run this endpoint?</h3>
+        ///     <p>To run this endpoint you have to send a DELETE request to the server: <i>https://<b>server_url</b>/api/v1/originData/{id}</i>. Where the <i>id</i> is obligatory request parameter and specifes identification number of the record which is about to be removed.</p>
+        ///     <h3>What response is get?</h3>
+        ///     <p>The server returns inforamtion whether the deletion operation was succesfull or not.</p>
+        ///     <h3>Reponse example</h3>
+        ///     <p>To see response example click "Try it out", enter record id (of the existing one) and then click "Execute".</p>
         /// </remarks>
         /// <returns></returns>
         /// 
@@ -84,11 +87,12 @@ namespace TemperatureProject.Api.Controllers
         /// This endpoint edits single measurement value with provided body.
         /// </summary>
         /// <remarks>
-        ///     <b> Question: How to run this endpoint?</b>
-        ///     <br>Answer: </br>
-        ///     <b> Question:</b>
-        ///     <br>Answer: </br>
-        ///     <br> Reponse example:</br>
+        ///     <h3>How to run this endpoint?</h3>
+        ///     <p>To run this endpoint you have to send a PATCH request to the server: <i>https://<b>server_url</b>/api/v1/originData</i>. The selection of the patched record is determined by its id. </p>
+        ///     <h3>What response is get?</h3>
+        ///     <p>The server returns inforamtion whether the PATCH operation was succesfull or not.</p>
+        ///     <h3>Reponse example</h3>
+        ///     <p>To see response example click "Try it out", enter record patch data and then click "Execute".</p>
         /// </remarks>
         /// <returns></returns>
         /// 
@@ -111,11 +115,12 @@ namespace TemperatureProject.Api.Controllers
         /// This endpoint adds to database single measurement with provided body.
         /// </summary>
         /// <remarks>
-        ///     <b> Question: How to run this endpoint?</b>
-        ///     <br>Answer: </br>
-        ///     <b> Question:</b>
-        ///     <br>Answer: </br>
-        ///     <br> Reponse example:</br>
+        ///     <h3>How to run this endpoint?</h3>
+        ///     <p>To run this endpoint you have to send a POST request to the server: <i>https://<b>server_url</b>/api/v1/originData</i>.</p>
+        ///     <h3>What response is get?</h3>
+        ///     <p>The server returns inforamtion whether the POST operation was succesfull or not.</p>
+        ///     <h3>Reponse example</h3>
+        ///     <p>To see response example click "Try it out", enter record data and then click "Execute".</p>
         /// </remarks>
         /// <returns></returns>
         /// 
