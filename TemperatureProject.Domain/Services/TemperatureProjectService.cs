@@ -21,6 +21,11 @@ namespace TemperatureProject.Domain.Services
             _temperatureDatabaseRepository = temperatureDatabaseRepository;
         }
 
+
+        /// <summary>
+        /// Async method return IEnumerable interface with models from db
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<OriginDataDto>> GetAllDataAsync()
         {
             var result = await _temperatureDatabaseRepository.GetAllDataFromOriginDataAsync();
@@ -37,6 +42,12 @@ namespace TemperatureProject.Domain.Services
             return convertedData;
         }
 
+
+        /// <summary>
+        /// Async method which get elements from db by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<OriginDataDto> GetDataByIdAsync(int id)
         {
             var result = await _temperatureDatabaseRepository.GetDataFromOriginDataByIdAsync(id);
@@ -51,11 +62,23 @@ namespace TemperatureProject.Domain.Services
             };
         }
 
+        /// <summary>
+        /// Async method which delete model by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task DeleteDataByIdAsync(int id)
         {
             await _temperatureDatabaseRepository.DeleteDataFromOriginDataByIdAsync(id);
         }
 
+
+        /// <summary>
+        /// Async method which update date 
+        /// </summary>
+        /// <param name="getRecord"></param>
+        /// <param name="contract"></param>
+        /// <returns></returns>
         public async Task EditDataByIdAsync(OriginDataDto getRecord, OriginDataContract contract)
         {
             var updatedModel = new OriginDataEntity
@@ -76,6 +99,11 @@ namespace TemperatureProject.Domain.Services
 
         }
 
+        /// <summary>
+        /// Add object with measurements to db 
+        /// </summary>
+        /// <param name="contract"></param>
+        /// <returns></returns>
         public async Task<string> AddDataAsync(OriginDataContract contract)
         {
             var updatedModel = new OriginDataEntity

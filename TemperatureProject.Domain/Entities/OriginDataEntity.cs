@@ -4,6 +4,9 @@ using System.Text;
 
 namespace TemperatureProject.Domain.Entities
 {
+    /// <summary>
+    /// Model with origin entity model
+    /// </summary>
     public class OriginDataEntity
     {
         public int ID { get;  set; }

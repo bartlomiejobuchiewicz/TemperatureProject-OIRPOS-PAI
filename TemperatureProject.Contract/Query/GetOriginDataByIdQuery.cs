@@ -7,6 +7,9 @@ using TemperatureProject.Core.ValueObjects;
 
 namespace TemperatureProject.Contract.Query
 {
+    /// <summary>
+    /// Get element by id
+    /// </summary>
     public class GetOriginDataByIdQuery: IRequest<ExecutionResult<OriginDataDto>>
     {
         public int Id { get; set; }

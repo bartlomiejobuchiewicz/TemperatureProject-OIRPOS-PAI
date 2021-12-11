@@ -6,6 +6,9 @@ using TemperatureProject.Core.ValueObjects;
 
 namespace TemperatureProject.Contract.Command
 {
+    /// <summary>
+    /// Model of measurement date
+    /// </summary>
     public class AddOriginDataCommand: IRequest<ExecutionResult<string>>
     {
         public string Data { get; set; }

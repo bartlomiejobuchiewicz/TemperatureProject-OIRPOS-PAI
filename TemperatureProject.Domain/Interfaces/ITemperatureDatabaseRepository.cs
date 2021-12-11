@@ -10,6 +10,10 @@ using TemperatureProject.Domain.Entities;
 
 namespace TemperatureProject.Domain.Interfaces
 {
+
+    /// <summary>
+    /// All async methods that makes operations on OriginDataModel object
+    /// </summary>
     public interface ITemperatureDatabaseRepository
     {
         Task<IEnumerable<OriginDataModel>> GetAllDataFromOriginDataAsync();

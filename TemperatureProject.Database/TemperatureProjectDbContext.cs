@@ -14,11 +14,20 @@ namespace TemperatureProject.Database
         private readonly LocalSettings _localSettings;
         public DbSet<OriginDataModel> TemperatureOriginData { get; set; }
 
+        /// <summary>
+        /// DbContext setings
+        /// </summary>
+        /// <param name="options"></param>
+        /// <param name="localSettings"></param>
         public TemperatureProjectDbContext(DbContextOptions<TemperatureProjectDbContext> options, LocalSettings localSettings):base(options)
         {
             _localSettings = localSettings;
         }
 
+        /// <summary>
+        /// Get date from date base
+        /// </summary>
+        /// <returns></returns>
         public Task<List<OriginDataModel>> GetAllData()
         {
            var query = (from row in TemperatureOriginData select row).ToListAsync();
@@ -26,6 +35,12 @@ namespace TemperatureProject.Database
            return query;
         }
 
+
+        /// <summary>
+        /// Get date from date base by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Task<OriginDataModel> GetDataById(int id)
         {
             var query = TemperatureOriginData.AsNoTracking().FirstOrDefaultAsync(row => row.ID == id);
@@ -33,6 +48,11 @@ namespace TemperatureProject.Database
             return query;
         }
 
+        /// <summary>
+        /// Method which delete entity by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task DeleteDataById(int id)
         {
             var getData = await GetDataById(id);
@@ -40,6 +60,12 @@ namespace TemperatureProject.Database
             var deleteResult = TemperatureOriginData.Remove(getData);
         }
 
+
+        /// <summary>
+        /// Method which delete change entity in date base
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public async Task EditDataById(OriginDataModel model)
         {
             var result = TemperatureOriginData.SingleOrDefault(b => b.ID == model.ID);
@@ -55,6 +81,12 @@ namespace TemperatureProject.Database
                 throw new NotImplementedException($"Update in database has been failed");
             }
         }
+
+        /// <summary>
+        /// Method which insert object to db
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
 
         public async Task AddDataToOriginData(OriginDataModel model)
         {

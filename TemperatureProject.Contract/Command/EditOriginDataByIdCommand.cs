@@ -6,6 +6,9 @@ using TemperatureProject.Core.ValueObjects;
 
 namespace TemperatureProject.Contract.Command
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class EditOriginDataByIdCommand: IRequest<ExecutionResult<string>>
     {
         public int Id { get; set; }

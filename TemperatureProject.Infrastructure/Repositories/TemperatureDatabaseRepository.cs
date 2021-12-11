@@ -17,18 +17,32 @@ namespace TemperatureProject.Infrastructure.Repositories
     public class TemperatureDatabaseRepository: ITemperatureDatabaseRepository
     {
         private readonly TemperatureProjectDbContext _dbcontext;
+
+        /// <summary>
+        /// DbContext configutration
+        /// </summary>
+        /// <param name="dbContext"></param>
         public TemperatureDatabaseRepository(TemperatureProjectDbContext dbContext)
         {
             _dbcontext = dbContext;
         }
 
+
+        /// <summary>
+        /// Async merthod return all date from db
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<OriginDataModel>> GetAllDataFromOriginDataAsync()
         {
             var result = await _dbcontext.GetAllData();
-
             return result;
         }
 
+        /// <summary>
+        /// Async method return OriginDataModel by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<OriginDataModel> GetDataFromOriginDataByIdAsync(int id)
         {
             var result = await _dbcontext.GetDataById(id);
@@ -40,12 +54,22 @@ namespace TemperatureProject.Infrastructure.Repositories
             return result;
         }
 
+        /// <summary>
+        /// Async method which delete object by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task DeleteDataFromOriginDataByIdAsync(int id)
         {
             await _dbcontext.DeleteDataById(id);
             await _dbcontext.SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Async method that update data by id
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public async Task EditDataFromOriginDataByIdAsync(OriginDataEntity entity)
         {
             var updatedModel = new OriginDataModel
@@ -61,6 +85,11 @@ namespace TemperatureProject.Infrastructure.Repositories
             await _dbcontext.SaveChangesAsync();
         }
 
+        /// <summary>
+        /// Async method that add model to db
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public async Task<string> AddDataToOriginDataAsync(OriginDataEntity entity)
         {
             var updatedModel = new OriginDataModel
