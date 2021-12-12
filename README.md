@@ -14,7 +14,9 @@ Needed tools:
 2. Save the local server name.
 3. Run Visual Studio project (solution file is located here: [TemperatureProject.Api](https://github.com/bartlomiejobuchiewicz/TemperatureProject-OIRPOS-PAI/tree/master/TemperatureProject.Api)
 4. Replace server name in appseting.json.
-	gif_here
+
+![connection_string](https://user-images.githubusercontent.com/54101971/145726328-43caafb2-fde1-4eb3-9eb0-04556e26032e.gif)
+
 5. Launch the project.
 
 A local database with a sample table is created automatically. After launching the application, the interface provided by the Swagger tool appears, presenting documentation of the created API and allowing to test particular entpoins.
