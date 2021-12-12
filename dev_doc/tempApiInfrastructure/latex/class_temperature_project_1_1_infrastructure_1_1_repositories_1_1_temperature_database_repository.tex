@@ -1,0 +1,148 @@
+\hypertarget{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository}{}\doxysection{Temperature\+Project.\+Infrastructure.\+Repositories.\+Temperature\+Database\+Repository Class Reference}
+\label{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository}\index{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}}
+Inheritance diagram for Temperature\+Project.\+Infrastructure.\+Repositories.\+Temperature\+Database\+Repository\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_a342929851a8d7cdfd7a3a6d60a2904a1}{Temperature\+Database\+Repository}} (Temperature\+Project\+Db\+Context db\+Context)
+\begin{DoxyCompactList}\small\item\em Db\+Context configutration \end{DoxyCompactList}\item 
+async Task$<$ IEnumerable$<$ Origin\+Data\+Model $>$ $>$ \mbox{\hyperlink{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_ac5c7a741d598527bdf0ff24e7ae04143}{Get\+All\+Data\+From\+Origin\+Data\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Async merthod return all date from db \end{DoxyCompactList}\item 
+async Task$<$ Origin\+Data\+Model $>$ \mbox{\hyperlink{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_a9c26790a92a6cb5340e7ea5a785a4904}{Get\+Data\+From\+Origin\+Data\+By\+Id\+Async}} (int id)
+\begin{DoxyCompactList}\small\item\em Async method return Origin\+Data\+Model by id \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_ae001f9178fc3ef175016a05e78487562}{Delete\+Data\+From\+Origin\+Data\+By\+Id\+Async}} (int id)
+\begin{DoxyCompactList}\small\item\em Async method which delete object by id \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_af2b1a6f6054a6add39d5cd6a4d9fe272}{Edit\+Data\+From\+Origin\+Data\+By\+Id\+Async}} (Origin\+Data\+Entity entity)
+\begin{DoxyCompactList}\small\item\em Async method that update data by id \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_a444a7ff44e45ce09b13a5ce291139490}{Add\+Data\+To\+Origin\+Data\+Async}} (Origin\+Data\+Entity entity)
+\begin{DoxyCompactList}\small\item\em Async method that add model to db \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly Temperature\+Project\+Db\+Context \mbox{\hyperlink{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_ae4d09c282a38f41684f2ffef419036d5}{\+\_\+dbcontext}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_a342929851a8d7cdfd7a3a6d60a2904a1}\label{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_a342929851a8d7cdfd7a3a6d60a2904a1}} 
+\index{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}!TemperatureDatabaseRepository@{TemperatureDatabaseRepository}}
+\index{TemperatureDatabaseRepository@{TemperatureDatabaseRepository}!TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}}
+\doxysubsubsection{\texorpdfstring{TemperatureDatabaseRepository()}{TemperatureDatabaseRepository()}}
+{\footnotesize\ttfamily Temperature\+Project.\+Infrastructure.\+Repositories.\+Temperature\+Database\+Repository.\+Temperature\+Database\+Repository (\begin{DoxyParamCaption}\item[{Temperature\+Project\+Db\+Context}]{db\+Context }\end{DoxyParamCaption})}
+
+
+
+Db\+Context configutration 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Context} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_a444a7ff44e45ce09b13a5ce291139490}\label{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_a444a7ff44e45ce09b13a5ce291139490}} 
+\index{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}!AddDataToOriginDataAsync@{AddDataToOriginDataAsync}}
+\index{AddDataToOriginDataAsync@{AddDataToOriginDataAsync}!TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}}
+\doxysubsubsection{\texorpdfstring{AddDataToOriginDataAsync()}{AddDataToOriginDataAsync()}}
+{\footnotesize\ttfamily async Task$<$ string $>$ Temperature\+Project.\+Infrastructure.\+Repositories.\+Temperature\+Database\+Repository.\+Add\+Data\+To\+Origin\+Data\+Async (\begin{DoxyParamCaption}\item[{Origin\+Data\+Entity}]{entity }\end{DoxyParamCaption})}
+
+
+
+Async method that add model to db 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_ae001f9178fc3ef175016a05e78487562}\label{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_ae001f9178fc3ef175016a05e78487562}} 
+\index{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}!DeleteDataFromOriginDataByIdAsync@{DeleteDataFromOriginDataByIdAsync}}
+\index{DeleteDataFromOriginDataByIdAsync@{DeleteDataFromOriginDataByIdAsync}!TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}}
+\doxysubsubsection{\texorpdfstring{DeleteDataFromOriginDataByIdAsync()}{DeleteDataFromOriginDataByIdAsync()}}
+{\footnotesize\ttfamily async Task Temperature\+Project.\+Infrastructure.\+Repositories.\+Temperature\+Database\+Repository.\+Delete\+Data\+From\+Origin\+Data\+By\+Id\+Async (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Async method which delete object by id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_af2b1a6f6054a6add39d5cd6a4d9fe272}\label{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_af2b1a6f6054a6add39d5cd6a4d9fe272}} 
+\index{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}!EditDataFromOriginDataByIdAsync@{EditDataFromOriginDataByIdAsync}}
+\index{EditDataFromOriginDataByIdAsync@{EditDataFromOriginDataByIdAsync}!TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}}
+\doxysubsubsection{\texorpdfstring{EditDataFromOriginDataByIdAsync()}{EditDataFromOriginDataByIdAsync()}}
+{\footnotesize\ttfamily async Task Temperature\+Project.\+Infrastructure.\+Repositories.\+Temperature\+Database\+Repository.\+Edit\+Data\+From\+Origin\+Data\+By\+Id\+Async (\begin{DoxyParamCaption}\item[{Origin\+Data\+Entity}]{entity }\end{DoxyParamCaption})}
+
+
+
+Async method that update data by id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_ac5c7a741d598527bdf0ff24e7ae04143}\label{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_ac5c7a741d598527bdf0ff24e7ae04143}} 
+\index{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}!GetAllDataFromOriginDataAsync@{GetAllDataFromOriginDataAsync}}
+\index{GetAllDataFromOriginDataAsync@{GetAllDataFromOriginDataAsync}!TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}}
+\doxysubsubsection{\texorpdfstring{GetAllDataFromOriginDataAsync()}{GetAllDataFromOriginDataAsync()}}
+{\footnotesize\ttfamily async Task$<$ IEnumerable$<$ Origin\+Data\+Model $>$ $>$ Temperature\+Project.\+Infrastructure.\+Repositories.\+Temperature\+Database\+Repository.\+Get\+All\+Data\+From\+Origin\+Data\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Async merthod return all date from db 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_a9c26790a92a6cb5340e7ea5a785a4904}\label{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_a9c26790a92a6cb5340e7ea5a785a4904}} 
+\index{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}!GetDataFromOriginDataByIdAsync@{GetDataFromOriginDataByIdAsync}}
+\index{GetDataFromOriginDataByIdAsync@{GetDataFromOriginDataByIdAsync}!TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}}
+\doxysubsubsection{\texorpdfstring{GetDataFromOriginDataByIdAsync()}{GetDataFromOriginDataByIdAsync()}}
+{\footnotesize\ttfamily async Task$<$ Origin\+Data\+Model $>$ Temperature\+Project.\+Infrastructure.\+Repositories.\+Temperature\+Database\+Repository.\+Get\+Data\+From\+Origin\+Data\+By\+Id\+Async (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Async method return Origin\+Data\+Model by id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_ae4d09c282a38f41684f2ffef419036d5}\label{class_temperature_project_1_1_infrastructure_1_1_repositories_1_1_temperature_database_repository_ae4d09c282a38f41684f2ffef419036d5}} 
+\index{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}!\_dbcontext@{\_dbcontext}}
+\index{\_dbcontext@{\_dbcontext}!TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository@{TemperatureProject.Infrastructure.Repositories.TemperatureDatabaseRepository}}
+\doxysubsubsection{\texorpdfstring{\_dbcontext}{\_dbcontext}}
+{\footnotesize\ttfamily readonly Temperature\+Project\+Db\+Context Temperature\+Project.\+Infrastructure.\+Repositories.\+Temperature\+Database\+Repository.\+\_\+dbcontext\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Igor/\+Desktop/\+Nowy folder/\+Temperature\+Project-\/\+OIRPOS-\/\+PAI/\+Temperature\+Project.\+Infrastructure/\+Repositories/\mbox{\hyperlink{_temperature_database_repository_8cs}{Temperature\+Database\+Repository.\+cs}}\end{DoxyCompactItemize}
