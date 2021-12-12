@@ -1,0 +1,94 @@
+\hypertarget{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler}{}\doxysection{Temperature\+Project.\+Core.\+Cqrs.\+Automate\+Request\+Handler\texorpdfstring{$<$}{<} TRequest \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler}\index{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}}
+Inheritance diagram for Temperature\+Project.\+Core.\+Cqrs.\+Automate\+Request\+Handler\texorpdfstring{$<$}{<} TRequest \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.355932cm]{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ Execution\+Result$<$ TResponse\+Dto $>$ $>$ \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_ac769026ae313a144018c4f87b9ec420c}{Handle}} (TRequest request, Cancellation\+Token cancellation\+Token)
+\item 
+async Task$<$ Execution\+Result $>$ \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_afb8e329036ef959fd9f02b3f2e7ef0de}{Handle}} (TRequest request, Cancellation\+Token cancellation\+Token)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract Task$<$ TResponse\+Dto $>$ \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a56150c05c84c668a34b0363038786e22}{Execute\+Request\+Delegate}} (TRequest request)
+\item 
+virtual TResponse\+Dto \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a3338239c5370f7f01234c814b6877b2e}{Create\+Response\+Dto\+From\+Response}} (dynamic response)
+\item 
+virtual Validation\+Result \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_aaf938562f5cd9edf28506534fbc8282d}{Pre\+Request\+Validation}} (TRequest input)
+\item 
+virtual Task$<$ Validation\+Result $>$ \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a305c1a61024677881956fe6e5d758e23}{Pre\+Request\+Validation\+Async}} (TRequest input)
+\item 
+abstract Task \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a17702751b310d6241b68643935a8abeb}{Execute\+Request\+Delegate}} (TRequest request)
+\item 
+virtual Validation\+Result \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_aaf938562f5cd9edf28506534fbc8282d}{Pre\+Request\+Validation}} (TRequest input)
+\item 
+virtual Task$<$ Validation\+Result $>$ \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a305c1a61024677881956fe6e5d758e23}{Pre\+Request\+Validation\+Async}} (TRequest input)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a3338239c5370f7f01234c814b6877b2e}\label{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a3338239c5370f7f01234c814b6877b2e}} 
+\index{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}!CreateResponseDtoFromResponse@{CreateResponseDtoFromResponse}}
+\index{CreateResponseDtoFromResponse@{CreateResponseDtoFromResponse}!TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}}
+\doxysubsubsection{\texorpdfstring{CreateResponseDtoFromResponse()}{CreateResponseDtoFromResponse()}}
+{\footnotesize\ttfamily virtual TResponse\+Dto \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler}{Temperature\+Project.\+Core.\+Cqrs.\+Automate\+Request\+Handler}}$<$ TRequest $>$.Create\+Response\+Dto\+From\+Response (\begin{DoxyParamCaption}\item[{dynamic}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a56150c05c84c668a34b0363038786e22}\label{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a56150c05c84c668a34b0363038786e22}} 
+\index{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}!ExecuteRequestDelegate@{ExecuteRequestDelegate}}
+\index{ExecuteRequestDelegate@{ExecuteRequestDelegate}!TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}}
+\doxysubsubsection{\texorpdfstring{ExecuteRequestDelegate()}{ExecuteRequestDelegate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily abstract Task$<$ TResponse\+Dto $>$ \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler}{Temperature\+Project.\+Core.\+Cqrs.\+Automate\+Request\+Handler}}$<$ TRequest $>$.Execute\+Request\+Delegate (\begin{DoxyParamCaption}\item[{TRequest}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a17702751b310d6241b68643935a8abeb}\label{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a17702751b310d6241b68643935a8abeb}} 
+\index{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}!ExecuteRequestDelegate@{ExecuteRequestDelegate}}
+\index{ExecuteRequestDelegate@{ExecuteRequestDelegate}!TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}}
+\doxysubsubsection{\texorpdfstring{ExecuteRequestDelegate()}{ExecuteRequestDelegate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily abstract Task \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler}{Temperature\+Project.\+Core.\+Cqrs.\+Automate\+Request\+Handler}}$<$ TRequest $>$.Execute\+Request\+Delegate (\begin{DoxyParamCaption}\item[{TRequest}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_ac769026ae313a144018c4f87b9ec420c}\label{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_ac769026ae313a144018c4f87b9ec420c}} 
+\index{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}!Handle@{Handle}}
+\index{Handle@{Handle}!TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}}
+\doxysubsubsection{\texorpdfstring{Handle()}{Handle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$ Execution\+Result$<$ TResponse\+Dto $>$ $>$ \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler}{Temperature\+Project.\+Core.\+Cqrs.\+Automate\+Request\+Handler}}$<$ TRequest $>$.Handle (\begin{DoxyParamCaption}\item[{TRequest}]{request,  }\item[{Cancellation\+Token}]{cancellation\+Token }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_afb8e329036ef959fd9f02b3f2e7ef0de}\label{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_afb8e329036ef959fd9f02b3f2e7ef0de}} 
+\index{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}!Handle@{Handle}}
+\index{Handle@{Handle}!TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}}
+\doxysubsubsection{\texorpdfstring{Handle()}{Handle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$ Execution\+Result $>$ \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler}{Temperature\+Project.\+Core.\+Cqrs.\+Automate\+Request\+Handler}}$<$ TRequest $>$.Handle (\begin{DoxyParamCaption}\item[{TRequest}]{request,  }\item[{Cancellation\+Token}]{cancellation\+Token }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_aaf938562f5cd9edf28506534fbc8282d}\label{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_aaf938562f5cd9edf28506534fbc8282d}} 
+\index{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}!PreRequestValidation@{PreRequestValidation}}
+\index{PreRequestValidation@{PreRequestValidation}!TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}}
+\doxysubsubsection{\texorpdfstring{PreRequestValidation()}{PreRequestValidation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual Validation\+Result \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler}{Temperature\+Project.\+Core.\+Cqrs.\+Automate\+Request\+Handler}}$<$ TRequest $>$.Pre\+Request\+Validation (\begin{DoxyParamCaption}\item[{TRequest}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_aaf938562f5cd9edf28506534fbc8282d}\label{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_aaf938562f5cd9edf28506534fbc8282d}} 
+\index{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}!PreRequestValidation@{PreRequestValidation}}
+\index{PreRequestValidation@{PreRequestValidation}!TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}}
+\doxysubsubsection{\texorpdfstring{PreRequestValidation()}{PreRequestValidation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Validation\+Result \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler}{Temperature\+Project.\+Core.\+Cqrs.\+Automate\+Request\+Handler}}$<$ TRequest $>$.Pre\+Request\+Validation (\begin{DoxyParamCaption}\item[{TRequest}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a305c1a61024677881956fe6e5d758e23}\label{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a305c1a61024677881956fe6e5d758e23}} 
+\index{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}!PreRequestValidationAsync@{PreRequestValidationAsync}}
+\index{PreRequestValidationAsync@{PreRequestValidationAsync}!TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}}
+\doxysubsubsection{\texorpdfstring{PreRequestValidationAsync()}{PreRequestValidationAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual Task$<$ Validation\+Result $>$ \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler}{Temperature\+Project.\+Core.\+Cqrs.\+Automate\+Request\+Handler}}$<$ TRequest $>$.Pre\+Request\+Validation\+Async (\begin{DoxyParamCaption}\item[{TRequest}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a305c1a61024677881956fe6e5d758e23}\label{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler_a305c1a61024677881956fe6e5d758e23}} 
+\index{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}!PreRequestValidationAsync@{PreRequestValidationAsync}}
+\index{PreRequestValidationAsync@{PreRequestValidationAsync}!TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$@{TemperatureProject.Core.Cqrs.AutomateRequestHandler$<$ TRequest $>$}}
+\doxysubsubsection{\texorpdfstring{PreRequestValidationAsync()}{PreRequestValidationAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Task$<$ Validation\+Result $>$ \mbox{\hyperlink{class_temperature_project_1_1_core_1_1_cqrs_1_1_automate_request_handler}{Temperature\+Project.\+Core.\+Cqrs.\+Automate\+Request\+Handler}}$<$ TRequest $>$.Pre\+Request\+Validation\+Async (\begin{DoxyParamCaption}\item[{TRequest}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Igor/\+Desktop/\+Nowy folder/\+Temperature\+Project-\/\+OIRPOS-\/\+PAI/\+Temperature\+Project.\+Core/\+Cqrs/\mbox{\hyperlink{_automate_request_handler_8cs}{Automate\+Request\+Handler.\+cs}}\end{DoxyCompactItemize}

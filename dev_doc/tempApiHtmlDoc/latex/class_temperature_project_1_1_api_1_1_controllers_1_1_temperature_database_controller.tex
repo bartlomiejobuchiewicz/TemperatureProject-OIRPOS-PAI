@@ -1,0 +1,165 @@
+\hypertarget{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller}{}\doxysection{Temperature\+Project.\+Api.\+Controllers.\+Temperature\+Database\+Controller Class Reference}
+\label{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller}\index{TemperatureProject.Api.Controllers.TemperatureDatabaseController@{TemperatureProject.Api.Controllers.TemperatureDatabaseController}}
+Inheritance diagram for Temperature\+Project.\+Api.\+Controllers.\+Temperature\+Database\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a94600287c304bce95bf4af1e099b7624}{Temperature\+Database\+Controller}} (IMediator command\+Bus)
+\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a555c4789ad68f7d09afa231c2b10c00e}{Get\+All}} ()
+\begin{DoxyCompactList}\small\item\em This endpoint returns all measurements, according to provided filters from local database. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a3051bcb0a5fdbdae999e3b97ea034035}{Get\+By\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em This endpoint returns single measurement by id from local database. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a45f92bcd2bca8317fbd3981c552d3740}{Delete\+By\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em This endpoint deletes single measurement with provided id from local database. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a22e842ec7fa5c87d9c2b18726f2a3f49}{Edit\+By\+Id}} (\mbox{[}From\+Body\mbox{]} Edit\+Origin\+Data\+By\+Id\+Command command)
+\begin{DoxyCompactList}\small\item\em This endpoint edits single measurement value with provided body. \end{DoxyCompactList}\item 
+async Task$<$ IAction\+Result $>$ \mbox{\hyperlink{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a883ff6dddb0b2dcd285dd0054b286c8d}{Add\+New\+Data}} (\mbox{[}From\+Body\mbox{]} Add\+Origin\+Data\+Command command)
+\begin{DoxyCompactList}\small\item\em This endpoint adds to database single measurement with provided body. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a94600287c304bce95bf4af1e099b7624}\label{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a94600287c304bce95bf4af1e099b7624}} 
+\index{TemperatureProject.Api.Controllers.TemperatureDatabaseController@{TemperatureProject.Api.Controllers.TemperatureDatabaseController}!TemperatureDatabaseController@{TemperatureDatabaseController}}
+\index{TemperatureDatabaseController@{TemperatureDatabaseController}!TemperatureProject.Api.Controllers.TemperatureDatabaseController@{TemperatureProject.Api.Controllers.TemperatureDatabaseController}}
+\doxysubsubsection{\texorpdfstring{TemperatureDatabaseController()}{TemperatureDatabaseController()}}
+{\footnotesize\ttfamily Temperature\+Project.\+Api.\+Controllers.\+Temperature\+Database\+Controller.\+Temperature\+Database\+Controller (\begin{DoxyParamCaption}\item[{IMediator}]{command\+Bus }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a883ff6dddb0b2dcd285dd0054b286c8d}\label{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a883ff6dddb0b2dcd285dd0054b286c8d}} 
+\index{TemperatureProject.Api.Controllers.TemperatureDatabaseController@{TemperatureProject.Api.Controllers.TemperatureDatabaseController}!AddNewData@{AddNewData}}
+\index{AddNewData@{AddNewData}!TemperatureProject.Api.Controllers.TemperatureDatabaseController@{TemperatureProject.Api.Controllers.TemperatureDatabaseController}}
+\doxysubsubsection{\texorpdfstring{AddNewData()}{AddNewData()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Temperature\+Project.\+Api.\+Controllers.\+Temperature\+Database\+Controller.\+Add\+New\+Data (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Body\mbox{]} Add\+Origin\+Data\+Command}]{command }\end{DoxyParamCaption})}
+
+
+
+This endpoint adds to database single measurement with provided body. 
+
+\doxyparagraph*{How to run this endpoint?}
+
+To run this endpoint you have to send a POST request to the server\+: {\itshape \href{https://}{\texttt{ https\+://}}{\bfseries{server\+\_\+url}}/api/v1/origin\+Data}.
+
+\doxyparagraph*{What response is get?}
+
+The server returns inforamtion whether the POST operation was succesfull or not.
+
+\doxyparagraph*{Reponse example}
+
+To see response example click \char`\"{}\+Try it out\char`\"{}, enter record data and then click \char`\"{}\+Execute\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a45f92bcd2bca8317fbd3981c552d3740}\label{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a45f92bcd2bca8317fbd3981c552d3740}} 
+\index{TemperatureProject.Api.Controllers.TemperatureDatabaseController@{TemperatureProject.Api.Controllers.TemperatureDatabaseController}!DeleteById@{DeleteById}}
+\index{DeleteById@{DeleteById}!TemperatureProject.Api.Controllers.TemperatureDatabaseController@{TemperatureProject.Api.Controllers.TemperatureDatabaseController}}
+\doxysubsubsection{\texorpdfstring{DeleteById()}{DeleteById()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Temperature\+Project.\+Api.\+Controllers.\+Temperature\+Database\+Controller.\+Delete\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+This endpoint deletes single measurement with provided id from local database. 
+
+\doxyparagraph*{How to run this endpoint?}
+
+To run this endpoint you have to send a DELETE request to the server\+: {\itshape \href{https://}{\texttt{ https\+://}}{\bfseries{server\+\_\+url}}/api/v1/origin\+Data/\{id\}}. Where the {\itshape id} is obligatory request parameter and specifes identification number of the record which is about to be removed.
+
+\doxyparagraph*{What response is get?}
+
+The server returns inforamtion whether the deletion operation was succesfull or not.
+
+\doxyparagraph*{Reponse example}
+
+To see response example click \char`\"{}\+Try it out\char`\"{}, enter record id (of the existing one) and then click \char`\"{}\+Execute\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a22e842ec7fa5c87d9c2b18726f2a3f49}\label{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a22e842ec7fa5c87d9c2b18726f2a3f49}} 
+\index{TemperatureProject.Api.Controllers.TemperatureDatabaseController@{TemperatureProject.Api.Controllers.TemperatureDatabaseController}!EditById@{EditById}}
+\index{EditById@{EditById}!TemperatureProject.Api.Controllers.TemperatureDatabaseController@{TemperatureProject.Api.Controllers.TemperatureDatabaseController}}
+\doxysubsubsection{\texorpdfstring{EditById()}{EditById()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Temperature\+Project.\+Api.\+Controllers.\+Temperature\+Database\+Controller.\+Edit\+By\+Id (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Body\mbox{]} Edit\+Origin\+Data\+By\+Id\+Command}]{command }\end{DoxyParamCaption})}
+
+
+
+This endpoint edits single measurement value with provided body. 
+
+\doxyparagraph*{How to run this endpoint?}
+
+To run this endpoint you have to send a PATCH request to the server\+: {\itshape \href{https://}{\texttt{ https\+://}}{\bfseries{server\+\_\+url}}/api/v1/origin\+Data}. The selection of the patched record is determined by its id. 
+
+\doxyparagraph*{What response is get?}
+
+The server returns inforamtion whether the PATCH operation was succesfull or not.
+
+\doxyparagraph*{Reponse example}
+
+To see response example click \char`\"{}\+Try it out\char`\"{}, enter record patch data and then click \char`\"{}\+Execute\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a555c4789ad68f7d09afa231c2b10c00e}\label{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a555c4789ad68f7d09afa231c2b10c00e}} 
+\index{TemperatureProject.Api.Controllers.TemperatureDatabaseController@{TemperatureProject.Api.Controllers.TemperatureDatabaseController}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!TemperatureProject.Api.Controllers.TemperatureDatabaseController@{TemperatureProject.Api.Controllers.TemperatureDatabaseController}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Temperature\+Project.\+Api.\+Controllers.\+Temperature\+Database\+Controller.\+Get\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This endpoint returns all measurements, according to provided filters from local database. 
+
+\doxyparagraph*{How to run this endpoint?}
+
+To run this endpoint you have to send a GET request to the server\+: {\itshape \href{https://}{\texttt{ https\+://}}{\bfseries{server\+\_\+url}}/api/v1/origin\+Data/all}
+
+\doxyparagraph*{What response is get?}
+
+The server returns all records from the Database, in the JSON format.
+
+\doxyparagraph*{Reponse example}
+
+To see response example click \char`\"{}\+Try it out\char`\"{} and then \char`\"{}\+Execute\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a3051bcb0a5fdbdae999e3b97ea034035}\label{class_temperature_project_1_1_api_1_1_controllers_1_1_temperature_database_controller_a3051bcb0a5fdbdae999e3b97ea034035}} 
+\index{TemperatureProject.Api.Controllers.TemperatureDatabaseController@{TemperatureProject.Api.Controllers.TemperatureDatabaseController}!GetById@{GetById}}
+\index{GetById@{GetById}!TemperatureProject.Api.Controllers.TemperatureDatabaseController@{TemperatureProject.Api.Controllers.TemperatureDatabaseController}}
+\doxysubsubsection{\texorpdfstring{GetById()}{GetById()}}
+{\footnotesize\ttfamily async Task$<$ IAction\+Result $>$ Temperature\+Project.\+Api.\+Controllers.\+Temperature\+Database\+Controller.\+Get\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+This endpoint returns single measurement by id from local database. 
+
+\doxyparagraph*{How to run this endpoint?}
+
+To run this endpoint you have to send a GET request to the server\+: {\itshape \href{https://}{\texttt{ https\+://}}{\bfseries{server\+\_\+url}}/api/v1/origin\+Data/\{id\}}. Where the {\itshape id} is obligatory request parameter and specifes identification number of desired record.
+
+\doxyparagraph*{What response is get?}
+
+The server returns the record from the Database. The record which was specifed by the {\itshape id}. Data is delivered in the JSON format.
+
+\doxyparagraph*{Reponse example}
+
+To see response example click \char`\"{}\+Try it out\char`\"{}, enter record id and then click \char`\"{}\+Execute\char`\"{}.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Igor/\+Desktop/\+Nowy folder/\+Temperature\+Project-\/\+OIRPOS-\/\+PAI/\+Temperature\+Project.\+Api/\+Controllers/\mbox{\hyperlink{_temperature_database_controller_8cs}{Temperature\+Database\+Controller.\+cs}}\end{DoxyCompactItemize}

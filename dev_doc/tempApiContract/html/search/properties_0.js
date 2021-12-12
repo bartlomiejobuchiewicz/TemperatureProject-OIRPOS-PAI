@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['czujnik1_0',['Czujnik1',['../class_temperature_project_1_1_contract_1_1_command_1_1_add_origin_data_command.html#a56834b0a2e1814c918b500b510e8c81f',1,'TemperatureProject.Contract.Command.AddOriginDataCommand.Czujnik1()'],['../class_temperature_project_1_1_contract_1_1_command_1_1_edit_origin_data_by_id_command.html#a4a35df1318a423e03379b7a15dfce112',1,'TemperatureProject.Contract.Command.EditOriginDataByIdCommand.Czujnik1()']]],
+  ['czujnik2_1',['Czujnik2',['../class_temperature_project_1_1_contract_1_1_command_1_1_add_origin_data_command.html#a32a35347eae3ef2217921a3508ed0eeb',1,'TemperatureProject.Contract.Command.AddOriginDataCommand.Czujnik2()'],['../class_temperature_project_1_1_contract_1_1_command_1_1_edit_origin_data_by_id_command.html#af55e3a6952aaabdfceeacd2af2f82a84',1,'TemperatureProject.Contract.Command.EditOriginDataByIdCommand.Czujnik2()']]],
+  ['czujnik3_2',['Czujnik3',['../class_temperature_project_1_1_contract_1_1_command_1_1_add_origin_data_command.html#a82d27b18e964228a533694d71dfd45f9',1,'TemperatureProject.Contract.Command.AddOriginDataCommand.Czujnik3()'],['../class_temperature_project_1_1_contract_1_1_command_1_1_edit_origin_data_by_id_command.html#a5d01a0e67a93876630b7207be0b57939',1,'TemperatureProject.Contract.Command.EditOriginDataByIdCommand.Czujnik3()']]]
+];
